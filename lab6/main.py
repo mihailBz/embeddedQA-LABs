@@ -31,7 +31,7 @@ def iperf_parser(output):
 
 def main():
     result, error = client(server_ip)
-    if error:
+    if error is not None:
         print(error)
     else:
         for value in iperf_parser(result):
